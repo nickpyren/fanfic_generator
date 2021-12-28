@@ -1,0 +1,3 @@
+markovify
+fastapi
+uvicorn[standard]
