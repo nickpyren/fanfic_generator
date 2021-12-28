@@ -3,9 +3,9 @@ import markovify
 
 class FanficGenerator:
     def __init__(self):
-        with open('./training_data/my_immortal_no_authors_notes.txt') as f:
+        with open('training_data/my_immortal_no_authors_notes.txt') as f:
             my_immortal_text = f.readlines()
-        with open('./training_data/colours_of_the_kaze.txt', encoding='cp850') as f:
+        with open('training_data/colours_of_the_kaze.txt', encoding='cp850') as f:
             colours_of_the_kaze_text = f.readlines()
         newline_texts = [my_immortal_text, colours_of_the_kaze_text]
         text_models = [markovify.NewlineText(text, state_size=2) for text in newline_texts]
