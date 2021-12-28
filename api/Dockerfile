@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 from python:3.8-slim-buster
-WORKDIR /fanfic_generator
+WORKDIR /fanfic-generator-api
 COPY . .
 RUN pip install -r requirements.txt
 EXPOSE 8000
