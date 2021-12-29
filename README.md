@@ -3,4 +3,4 @@ Uses Markov Chains implemented by markovify to generate additional chapters of a
 
 Trained on:
 * https://www.fanfiction.net/s/7936401/1/Colours-of-the-Kaze
-* https://m.fanfiction.net/s/6829556/1/My-Immortal
+* https://www.fanfiction.net/s/6829556/1/My-Immortal
