@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect }  from 'react';
 
 function App() {
+  const [text, setText] = useState([]);
+  useEffect(() => {
+    fetch("https://fanfic-generator-i2xsl.ondigitalocean.app/api/fanfic")
+      .then(res => res.json())
+      .then(
+        (data) => {
+          setText(data.text);
+        },
+        (error) => {
+        }
+      )
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className="text">{text}</p>
     </div>
   );
 }
